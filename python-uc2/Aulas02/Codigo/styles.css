@@ -1,0 +1,40 @@
+body { 
+    font-family: sans-serif;
+    font-size: 12px;
+    color: black;
+    padding-right: 10px;
+}
+
+
+header {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: rgb(245, 8, 8);
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+h1 {    
+    font-family: "Sofia", sans-serif;
+    border-left-style:groove;
+    border-left-width: 5px;
+    border-left-color: rgb(233, 17, 17);
+
+    border-right-style: unset;
+    border-right-width: 5px;
+    border-right-color: rgb(233, 17, 17);
+    padding-left: 10px;
+}
+
+main {
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: rgb(15, 0, 0);
+    padding-left: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    border-top: dashed 3px black;
+    text-align: right;
+} 

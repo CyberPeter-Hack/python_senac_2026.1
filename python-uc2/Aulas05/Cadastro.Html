@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Inicio do Head-->
+<head>  
+    <title>[MUDAR]</title>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="description" content="[MUDAR]">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+        .adicionar_borda {
+           border-width: 1px;
+           border-style: solid;
+           border-color: black;            
+        }
+    </style>
+
+</head>
+<!-- Final do Head-->
+
+<!-- Inicio do Body -->
+<body class="bg-secondary">
+<!-- 
+    DIV - Prinicipal
+    Area principal do site contem o 
+        - Header
+        - Main 
+        - Footer
+ -->
+
+<div id="div_principal" class="container adicionar_borda bg-light">
+    <!--
+        Header da pagina 
+        [-] Logotipo 
+        [-] Titulo
+        [-] Menu Principal
+        [-] Login / Logout / Criar conta
+    -->
+    <header class="adicionar_borda">
+       <div class="row">
+            <div class="col-12">
+                Logo / Titulo
+            </div>
+       </div> 
+
+       <div class="row">
+            <div class="col-9">
+                Menu Principal
+            </div>
+            <div class="col-3">
+                Login / Logout / Criar conta
+            </div>
+       </div>
+    </header>
+
+    <!-- 
+        Main da pagina 
+    -->
+    <main class="adicionar_borda">
+        <!-- Formulário de Cadastro -->
+         <form action="cadastro/" method="get" target="_blank">
+        
+            <!-- Nome Completo -->
+            <label for="nome_completo">Nome Completo:</label>
+            <input type="text" id="nome_completo" name="nome_completo"  
+                placeholder="Digite seu nome completo" required>
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" 
+                placeholder="Digite seu email" required>
+
+            <!-- Senha -->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" 
+                placeholder="Digite sua senha" required minlength="8">
+
+            <!-- Confirmar Senha -->
+            <label for="confirmar_senha">Confirmar Senha:</label>
+            <input type="password" id="confirmar_senha" name="confirmar_senha" 
+                placeholder="Confirme sua senha" required minlength="8">
+
+            <!-- CPF -->
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" 
+                placeholder="xxx-xxx-xxx-xx" required>
+
+            <!-- Lougadouro -->
+            <label for="lougradouro">Logradouro:</label>
+            <input type="text" id="lougradouro" name="lougradouro" 
+                placeholder="Digite seu logradouro" required>
+            
+            <!-- CEP -->
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" 
+                placeholder="xxxxx-xxx" required> 
+            
+            <!-- Complemento -->
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" 
+                placeholder="Digite o complemento" required>
+            
+            <!-- Bairro -->
+            <label for="Bairro">Bairro:</label>
+            <input type="text" id="Bairro" name="Bairro" 
+                placeholder="Digite seu bairro" required>
+            
+            <!-- Cidade -->
+            <label for="Cidade">Cidade:</label>
+            <input type="text" id="Cidade" name="Cidade" 
+                placeholder="Digite sua cidade" required>
+            
+            <!-- Estado -->
+            <label for="Estado">Estado:</label>
+            <input type="text" id="Estado" name="Estado" 
+                placeholder="Digite seu estado" required>
+            
+            <!-- Botão de Envio -->
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+       </form>        
+    </main>
+
+    <!--
+        Footer da pagina 
+        [-] Menu Secundário
+        [-] Contato
+        [-] Copyright do site
+        [-] Redes Sociais
+    -->
+    <footer class="adicionar_borda">
+        <div class="row">
+            <div class="col-4">
+                Menu Secundário
+            </div>
+        
+            <div class="col-5">
+                Contato <br> 
+                Copyright do site
+            </div>
+            <!--
+                Redes Sociais - GitHub, LinkedIn, Instagram, Facebook, youtube
+            -->
+            <div class="col-3">
+               <a href="https://github.com/CyberPeter-Hacker" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+               <a href="https://www.linkedin.com/in/guilherme-blanc-818a49290/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+               <a href="https://www.instagram.com/guiblanc710/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </footer>
+</div> 
+<!-- Final da Div Principal-->   
+
+<!-- Não apague a tag "SCRIPT" -->
+<!-- Bootstrap JS e dependências -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Não apague a tag "SCRIPT" -->
+</body>
+<!-- Final do Body-->
+</html>

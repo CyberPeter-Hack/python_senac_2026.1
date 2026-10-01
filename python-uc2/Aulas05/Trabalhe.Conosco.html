@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Inicio do Head-->
+<head>  
+    <title>[MUDAR]</title>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="description" content="[MUDAR]">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+        .adicionar_borda {
+           border-width: 1px;
+           border-style: solid;
+           border-color: black;            
+        }
+    </style>
+
+</head>
+<!-- Final do Head-->
+
+<!-- Inicio do Body -->
+<body class="bg-secondary">
+<!-- 
+    DIV - Prinicipal
+    Area principal do site contem o 
+        - Header
+        - Main 
+        - Footer
+ -->
+
+<div id="div_principal" class="container adicionar_borda bg-light">
+    <!--
+        Header da pagina 
+        [-] Logotipo 
+        [-] Titulo
+        [-] Menu Principal
+        [-] Login / Logout / Criar conta
+    -->
+    <header class="adicionar_borda">
+
+       <div class="container-fluid">
+            <div class="col-12">
+                Logo / Titulo
+            </div>
+       </div> 
+
+
+
+       <!-- Barra de Navegação -->
+       <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                <a class="nav-link active"  
+                    href="inde.html">
+                    Home
+                </a>
+                </li>
+
+                
+                <li class="nav-item">
+                <a class="nav-link active"  
+                    href="inde.html">
+                    Loja
+                </a>
+                </li>
+
+                
+                <li class="nav-item">
+                <a class="nav-link active"  
+                    href="inde.html">
+                    Blog
+                </a>
+
+                </li>
+            </ul>
+            
+            <form class="d-flex">
+                    <a href="auth/login.html"
+                        class="btn btn-primary me-1">
+                        <i class="fa-solid fa-right-to-bracket"></i>   
+                        Login
+                    </a>
+                    <a href="auth/logout.html"
+                        class="btn btn-danger me-1">
+                        <i class="fa-solid fa-right-from-bracket"></i>   
+                        Logout
+                    </a>
+                        <a href="auth/register.html"
+                        class="btn btn-success me-1">
+                        <i class="fa-solid fa-user-plus"></i>   
+                        </a>
+            </form>
+            </div>
+        </div>
+       </nav>        
+       <!--Final da Barra de Navegação-->
+        
+    </header>
+
+    <!-- 
+        Main da pagina 
+    -->
+    <main class="adicionar_borda">
+        <!-- Formulário de Cadastro -->
+         <form action="cadastro/" method="get" target="_blank">
+        
+            <!-- Nome Completo -->
+            <div class="mb-3">
+                <label for="nome_completo" class="form-label">Nome Completo:</label>
+                <input type="text" class="form-control" id="nome_completo" name="nome_completo"  
+                    placeholder="Digite seu nome completo" required>
+            </div>
+            
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                    placeholder="Digite seu email" required>
+            </div>
+
+            <!-- Estado -->
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado:</label>
+                <select class="form-control" id="estado" name="estado" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            
+            <!--Currículo-->
+            <div class="mb-3">
+                <label for="curriculum" class="form-label">Currículo:</label>
+                <input type="file" class="form-control" id="curriculum" name="curriculum" accept=".pdf,.doc,.docx">
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="n-3 row ms-1 mb-3 me-1">
+                <div class="col-6">
+                <button type="submit" 
+                    class="form-control btn btn-outline-primary">
+                    Enviar
+                </button>
+            </div>
+            <div class="col-6">
+                <button type="reset" 
+                    class="form-control btn btn-outline-secondary">
+                    Limpar</button>
+            </div>
+        </div>
+        </form>        
+    </main>
+
+    <!--
+        Footer da pagina 
+        [-] Menu Secundário
+        [-] Contato
+        [-] Copyright do site
+        [-] Redes Sociais
+    -->
+    <footer class="adicionar_borda">
+        <div class="row my-3">
+            <div class="col-4">
+                Menu Secundário
+            </div>
+        
+            <div class="col-5">
+                Contato <br> 
+                Copyright do site
+            </div>
+            <!--
+                Redes Sociais - GitHub, LinkedIn, Instagram, Facebook, youtube
+            -->
+            <div class="col-3 my-3">
+               
+                <a href="https://github.com/CyberPeter-Hacker" 
+                     target="_blank" title="GitHub"
+                     class="btn btn-outline-dark">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/guilherme-blanc-818a49290/" 
+                     target="_blank" title="LinkedIn"
+                     class="btn btn-outline-dark">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://www.instagram.com/guiblanc710/"
+                     target="_blank" title="Instagram"
+                     class="btn btn-outline-dark">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/guiblanc710" 
+                     target="_blank" title="Facebook"
+                     class="btn btn-outline-dark">
+                    <i class="fa-brands fa-facebook"></i> 
+                </a>
+
+                <a href="https://www.youtube.com" 
+                     target="_blank" title="YouTube"
+                     class="btn btn-outline-dark">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div> 
+<!-- Final da Div Principal-->   
+
+<!-- Não apague a tag "SCRIPT" -->
+<!-- Bootstrap JS e dependências -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Não apague a tag "SCRIPT" -->
+</body>
+<!-- Final do Body-->
+</html>

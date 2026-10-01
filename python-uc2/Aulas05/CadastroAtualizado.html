@@ -55,12 +55,25 @@
             </div>
        </div> 
 
-       <div class="row">
+           <div class="row mb-3 me-1">
             <div class="col-9">
                 Menu Principal
             </div>
-            <div class="col-3">
-                Login / Logout / Criar conta
+            <div class="col-3 text-end">
+                <button
+                class="btn btn-primary">
+                <i class="fa-solid fa-right-to-bracket"></i>   
+                Login
+                </button>
+                <button
+                class="btn btn-secondary">
+                <i class="fa-solid fa-right-from-bracket"></i>   
+                Logout
+                </button>
+                <button
+                class="btn btn-success">
+                <i class="fa-solid fa-user-plus"></i>   
+                </button>
             </div>
        </div>
     </header>
@@ -78,6 +91,24 @@
                 <input type="text" class="form-control" id="nome_completo" name="nome_completo"  
                     placeholder="Digite seu nome completo" required>
             </div>
+            
+            <!-- Data de Nascimento / Sexo -->
+            <div class="row">
+                <div class="col-10">
+                    <label for="data_nascimento" class="form-label">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" 
+                        required>
+                </div>
+                <div class="col-2">
+                    <label for="sexo" class="form-label">Sexo:</label><br>    
+                    <input type="radio" id="html" name="fav_language" value="Masculino">
+                    <label for="MASC">Masculino</label><br>
+                    <input type="radio" id="css" name="fav_language" value="Feminino">
+                    <label for="FEM">Feminino</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="Outro">
+                    <label for="OUTRO">Outro</label>
+                </div>
+            </div>
 
             <!-- Email -->
             <div class="mb-3">
@@ -86,18 +117,18 @@
                     placeholder="Digite seu email" required>
             </div>
 
-            <!-- Senha -->
-            <div class="mb-3">
+            <!-- Senha / Confirmar Senha -->
+            <div class="row">
+                <div class="col-6">
                 <label for="senha" class="form-label">Senha:</label>
                 <input type="password" class="form-control" id="senha" name="senha" 
                     placeholder="Digite sua senha" required minlength="8">
-            </div>
-
-            <!-- Confirmar Senha -->
-            <div class="mb-3">
+                </div>
+                <div class="col-6">
                 <label for="confirmar_senha" class="form-label">Confirmar Senha:</label>
                 <input type="password" class="form-control" id="confirmar_senha" name="confirmar_senha" 
                     placeholder="Confirme sua senha" required minlength="8">
+                </div>  
             </div>
 
             <!-- CPF -->
@@ -163,6 +194,7 @@
                     class="form-control btn btn-outline-secondary">
                     Limpar</button>
             </div>
+        </div>
         </form>        
     </main>
 
@@ -187,12 +219,17 @@
                 Redes Sociais - GitHub, LinkedIn, Instagram, Facebook, youtube
             -->
             <div class="col-3">
-               <a href="https://github.com/CyberPeter-Hacker" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-               <a href="https://www.linkedin.com/in/guilherme-blanc-818a49290/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-               <a href="https://www.instagram.com/guiblanc710/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+               <button class="btn btn-outline-dark" title="GitHub">
+                <a href="https://github.com/CyberPeter-Hacker" target="_blank" title="GitHub"><i class="fa-brands fa-square-github"></i></a>
+               </button>
+               <button class="btn btn-outline-dark" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/guilherme-blanc-818a49290/" target="_blank" title="LinkedIn"><i class="fa-brands fa-square-linkedin"></i></a>
+               </button>
+               <button class="btn btn-outline-dark" title="Instagram">
+                <a href="https://www.instagram.com/guiblanc710/" target="_blank" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+               </button>
             </div>
-        </div>
-
+            </div>
     </footer>
 </div> 
 <!-- Final da Div Principal-->   

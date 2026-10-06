@@ -133,7 +133,80 @@
         <div class="container">
 
             <div class="row">
-        
+               <!-- Formulário de Cadastro -->
+                <form action="cadastro/" method="get" target="_blank">
+                
+                    <!-- Nome Completo -->
+                    <div class="mb-3">
+                        <label for="nome_completo" class="form-label">Nome Completo:</label>
+                        <input type="text" class="form-control" id="nome_completo" name="nome_completo"  
+                            placeholder="Digite seu nome completo" required>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                            placeholder="Digite seu email" required>
+                    </div>
+
+                    <!-- Estado -->
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado:</label>
+                        <select class="form-control" id="estado" name="estado" required>
+                            <option value="">Selecione um estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    
+                    <!--Currículo-->
+                    <div class="mb-3">
+                        <label for="curriculum" class="form-label">Currículo:</label>
+                        <input type="file" class="form-control" id="curriculum" name="curriculum" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <div class="n-3 row ms-1 mb-3 me-1">
+                        <div class="col-6">
+                        <button type="submit" 
+                            class="form-control btn btn-outline-primary">
+                            Enviar
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="reset" 
+                            class="form-control btn btn-outline-secondary">
+                            Limpar</button>
+                    </div>
+                </div>
+                </form>        
+            </div>
 
     </main>
 

@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="pt-BR">
+
+<head>
+    <title>Minha Página</title>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição da minha página">
+
+    <title>
+        {% block title %} Python UC3 {% endblock %}
+    </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">  
+    <style>
+        .adicionar_borda {
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+
+</head>
+<!-- Final do Head-->
+
+<!-- Inicio do Body -->
+
+<body class="bg-light">
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+    <header>
+
+        <!-- Navbar -->
+        {% block navbar %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <i class="fa-brands fa-rebel"></i>
+                </a>
+
+                <!-- Botão Mobile -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Itens da Barra de Navageção -->
+                        {% block navbar_iten %}
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="produtos-lista.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                        {% endblock %}
+
+                    </ul>
+
+                    <!-- Botões -->
+                    <div class="d-flex">
+
+                        <a href="login.html"
+                            class="btn btn-sm btn-success me-1">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            Login
+                        </a>
+
+                        <a href="auth/logout"
+                            class="btn btn-sm btn-warning me-1">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+
+                        <a href="cadastro-bs.html"
+                            class="btn btn-sm btn-primary"
+                            title="Realizar o cadastro">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+        {% endblock %}
+        <!-- Navbar - Final -->
+        <!-- Bloco opicional para estilos customizados adicionais -->
+        {% block styles %}{% endblock %}
+    </header>
+
+    <h> Python </h>
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+    <main class="container my-4">
+        {% block conteudo %}
+
+
+        {% endblock %}
+
+    </main> 
+
+    <!-- =========================================
+         FOOTER
+         
+         IMPORTANTE:
+         O footer está FORA do container e da row.
+         Por isso o bg-dark ocupa 100% da tela.
+    ========================================== -->
+    <footer class="bg-dark  text-light">
+
+        <div class="container-fluid py-4">
+
+            <div class="container">
+                {%block footer %}
+
+                <div class="row">
+
+                    <!-- LINKS RÁPIDOS -->
+                    <div class="col-12 col-md-4 mb-4">
+
+                        <nav class="nav flex-column">
+
+                            <a class="nav-link text-light py-1"
+                                href="sobre.html">
+                                Quem Somos
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="contato.html">
+                                Fale Conosco
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="meuperfil.html">
+                                Meu Perfil
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="blog.html">
+                                Blog
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="trabalhe-conosco.html">
+                                Trabalhe Conosco
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+
+                    <!-- CONTATOS -->
+                    <div class="col-12 col-md-4 mb-4">
+
+                        
+
+                        <nav class="nav flex-column">
+
+                            <a class="nav-link text-light py-1"
+                                href="contato.html">
+
+                                <i class="bi bi-telephone-fill me-2"></i>
+                                Telefone
+
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="email.html">
+
+                                <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                                Email
+
+                            </a>
+
+                            <a class="nav-link text-light py-1"
+                                href="suporte.html">
+
+                                <i class="bi bi-headset me-2"></i>
+                                Suporte
+
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+
+                    <!-- REDES SOCIAIS -->
+                    <div class="col-12 col-md-4 mb-4">
+
+                        <div class="d-flex gap-2">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/luisrodrigonet/"
+                                target="_blank"
+                                title="Acesse nosso GitHub"
+                                class="btn btn-outline-light">
+
+                                <i class="fa-brands fa-github"></i>
+
+                            </a>
+
+
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/"
+                                target="_blank"
+                                title="Acesse nosso YouTube"
+                                class="btn btn-outline-light">
+
+                                <i class="fa-brands fa-youtube"></i>
+
+                            </a>
+
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/"
+                                target="_blank"
+                                title="Acesse nosso Instagram"
+                                class="btn btn-outline-light">
+
+                                <i class="fa-brands fa-instagram"></i>
+
+                            </a>
+
+
+                            <!-- LinkedIn -->
+                            <a href="https://br.linkedin.com/"
+                                target="_blank"
+                                title="Acesse nosso LinkedIn"
+                                class="btn btn-outline-light">
+
+                                <i class="fa-brands fa-linkedin"></i>
+
+                            </a>
+
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/"
+                                target="_blank"
+                                title="Acesse nosso Facebook"
+                                class="btn btn-outline-light">
+
+                                <i class="fa-brands fa-facebook"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINHA -->
+                <hr>
+
+
+                <!-- COPYRIGHT -->
+                <div class="row">
+
+                    <div class="col-12 text-center">
+
+                        <p class="mb-0">
+                            &copy; 2026 - Todos os direitos reservados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            {% endblock %}
+        </div>
+        
+    </footer>
+
+
+    <!-- =========================================
+         BOOTSTRAP JS
+    ========================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    </body>
+
+</html>
